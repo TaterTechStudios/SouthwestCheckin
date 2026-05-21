@@ -27,9 +27,9 @@ if (!CONFIRMATION || !FIRST_NAME || !LAST_NAME) {
     await page.screenshot({ path: '/home/user/checkin-loaded.png', fullPage: true });
 
     // Fill in the check-in form
-    await page.fill('[name="confirmationNumber"], #confirmationNumber, [data-qa="confirmation-number"]', CONFIRMATION);
-    await page.fill('[name="firstName"], #firstName, [data-qa="last-name"]', FIRST_NAME);
-    await page.fill('[name="lastName"], #lastName, [data-qa="last-name"]', LAST_NAME);
+    await page.fill('#confirmationNumber', CONFIRMATION);
+    await page.fill('#passengerFirstName', FIRST_NAME);
+    await page.fill('#passengerLastName', LAST_NAME);
 
     await page.screenshot({ path: '/home/user/checkin-before-submit.png' });
 
