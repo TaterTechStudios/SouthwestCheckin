@@ -45,7 +45,7 @@ async function clickIfVisible(page, selector, description) {
     await page.screenshot({ path: '/home/user/checkin-2-filled.png' });
 
     // Step 3: Submit initial form
-    await page.click('[type="submit"], button:has-text("Check in")');
+    await page.click('#form-mixin--submit-button');
     await page.waitForLoadState('domcontentloaded', { timeout: 30000 });
     await page.screenshot({ path: '/home/user/checkin-3-after-submit.png', fullPage: true });
 
